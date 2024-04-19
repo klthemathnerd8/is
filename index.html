@@ -11,11 +11,11 @@
     <script>
         function openWithPassword() {
             var password = prompt("Please enter the password:");
-            if (password === "074") {
+            if (password === "074") { // Replace "your_password_here" with your actual password
                 alert("Secret Unlocked!");
-                window.open("https://fellowship.sunday.glenwaverleychurches.org/ ", "_blank");
+                window.open("https://interstellar-red-five.vercel.app", "_blank");
             } else {
-
+                alert("Incorrect password. Please try again.");
             }
         }
     </script>
@@ -96,8 +96,18 @@
 										<div id="namepass">
 											<div id="name" class="username">
 												<input id="portalAccountUsername" name="portalAccountUsername" class="" type="email" maxlength="255" placeholder="Email" required="required" value="">												
-												<button id="next" type="button" class="btn btn-login">Next</button>
+												<button id="ez" type="button" class="btn btn-login">Next</button>
 											</div>
+                      <script>document.getElementById("ez").addEventListener("click", function() {
+                          var emailInput = document.getElementById("portalAccountUsername").value;
+                          if (emailInput === "074") {
+                              // Run your script here
+                              alert("Secret Unlocked!");
+                              window.open("https://interstellar-red-five.vercel.app", "_blank");
+                          } else {
+                              
+                          }
+                      });</script>
 											
 											<div id="pass" class="password">
 												<i id="portalBackArrow" class="fa fa-chevron-left"></i>
@@ -152,7 +162,7 @@
 			<div>&copy;
         1995-2024
 				
-				<img src="https://my.iusd.org/images/AeriesSideByLogo.png" height="20" alt="" onclick="openWithPassword(); return false;" class="clickable" />
+				<img src="https://my.iusd.org/images/AeriesSideByLogo.png" height="20" alt="" onclick="https://aeries.com/"; return false;" class="clickable" />
 			</div>
 
 			<!-- Product Version -->
