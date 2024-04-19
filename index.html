@@ -1,0 +1,385 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		
+		<meta name="apple-itunes-app" content="app-id=1261483635">
+		<meta name="google-play-app" content="app-id=com.aeries.mobileportal">
+    <script>
+        function openWithPassword() {
+            var password = prompt("Please enter the password:");
+            if (password === "074") { // Replace "your_password_here" with your actual password
+                alert("Secret Unlocked!");
+                window.open("https://interstellar-red-five.vercel.app", "_blank");
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta charset="utf-8">
+		<link rel="apple-touch-icon" href="https://my.iusd.org/images/aeries-logo-a.png"/>
+	
+		<title>
+			Aeries: Portals
+		</title>
+				
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="shortcut icon" href="https://my.iusd.org/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="https://my.iusd.org/favicon.ico" type="image/x-icon" />
+		
+		<link rel="stylesheet" type="text/css" href="https://my.iusd.org/StyleSheets/font-awesome/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="https://my.iusd.org/StyleSheets/Sofia.css" />
+		<link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+
+		<link id="BaseCSS" rel="stylesheet" type="text/css" href="https://my.iusd.org/StyleSheets/GeneralLight.css?v=2018.7.2"></link>
+		<link href="https://my.iusd.org/StyleSheets/bootstrap/bootstrap.css" rel="stylesheet">
+		<link href="https://my.iusd.org/StyleSheets/aeries-student-login.css?vsn=9.24.4.11" rel="stylesheet">
+		<link href="https://my.iusd.org/StyleSheets/language.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://my.iusd.org/KendoUI/kendo.default.min.css?v=2017.1.118" />
+		<link rel="stylesheet" type="text/css" href="https://my.iusd.org/KendoUI/kendo.common.min.css?v=2017.1.118" />
+
+		<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>		
+	</head>
+
+	<!--[if lt IE 9 ]> <script>window.location.replace("OldBrowser.aspx");</script> <![endif]-->
+<!--[if (IE)]><body id="TheBody" class="OldIE"><![endif]-->
+<!--[if !(IE)]><!--><body id="TheBody" class="ModernBrowser"><!--<![endif]-->
+		<div class="m-wrap m-invisible ac" data-role="content">
+			<!-- School district name -->
+			<h1 id="district" class="truncate" style="text-align: center; margin-bottom: 0;">Irvine Unified School District</h1>
+
+			
+
+			<div id="divLoginContainer">
+			<!-- start Login box -->
+			<div class="container" id="login-block" data-step="username">
+
+						<div class="login-box clearfix">
+
+                       
+							<div class="language-wrapper">
+								<select id="language">
+									<option value="00" selected="selected">English</option>
+									<option value="01">Español</option>
+									<option value="02">Việt</option>
+									<option value="03">中文</option>
+									<option value="04">한국어</option>
+									<option value="11">العربية</option>
+									<option value="12">Հայերեն</option>
+								</select>
+								<div class="caret"></div>
+							</div>
+                       
+							<div class="login-logo">
+			        			<img src="https://my.iusd.org/images/Combomark_Transparent.svg" width="213" height="170" onerror="this.src='https://my.iusd.org/images/Combomark_Transparent.png'; this.onerror=null;" alt="Aeries Student Information System" onclick="externalLink('https://www.aeries.com'); return false;" class="clickable" />
+							</div> 
+							<hr />
+							<div class="login-form">
+
+			        			<!-- Start Error box -->
+			        			<div id="errorContainer" class="alert alert-danger" style="display:none;">
+									<button id="portalCloseError" type="button" class="close"> &times;</button>
+									<span id="errorMessage" class="error" data-pw-error="You must enter a password!" data-username-error="You must enter a User Name!"></span>
+								</div> <!-- End Error box -->
+                          
+			        			<form method="post" novalidate="novalidate">
+                                    
+									<input id="checkCookiesEnabled" name="checkCookiesEnabled" type="hidden" value="false">         
+						
+									<div id="credentials">
+										<div id="namepass">
+											<div id="name" class="username">
+												<input id="portalAccountUsername" name="portalAccountUsername" class="" type="email" maxlength="255" placeholder="Email" required="required" value="">												
+												<button id="next" type="button" class="btn btn-login">Next</button>
+											</div>
+											
+											<div id="pass" class="password">
+												<i id="portalBackArrow" class="fa fa-chevron-left"></i>
+												<input id="portalAccountPassword" name="portalAccountPassword" class="" type="password" maxlength="255" placeholder="Password" required="required">
+												<input id="portalAccountUsernameLabel" name="portalAccountUsernameLabel" class="" maxlength="255" readonly="true">
+												<input id="g-recaptcha-request-token" name="g-recaptcha-request-token" type="hidden" value="" />
+												<button id="LoginButton" name="submit" type="submit" class="btn btn-login" onclick="if(!isComplete()){ return false; }">Sign In</button>
+											</div>
+										</div>
+						   			</div>
+								</form>	
+                          
+								<div class="login-links"> 
+									<!-- Forgot password -->
+									<a href="https://my.iusd.org/LostPassword.aspx" id="forgotPassword" class="account-links">Forgot Password?</a>
+					
+									<!-- Create new account -->
+												
+								</div>      		
+							</div> 		
+							
+						</div>
+
+				
+					<div class="login-box">
+						<div class="login-app">
+							Get the Aeries Mobile Portal App!
+							<div class="login-app-logos">
+								<a href="https://itunes.apple.com/us/app/aeries-mobile-portal/id1261483635?mt=8" target="_blank" class="apple-link"><img src="https://my.iusd.org/images/apple-store-badge.svg" onerror="this.src='https://my.iusd.org/images/apple-store-badge.png'; this.onerror=null;" alt="Aeries Student Information System" /></a>
+								<a href="https://play.google.com/store/apps/details?id=com.aeries.mobileportal" target="_blank" class="google-link"><img src="https://my.iusd.org/images/google-play-badge.svg" onerror="this.src='https://my.iusd.org/images/google-play-badge.png'; this.onerror=null;" alt="Aeries Student Information System" /></a>
+							</div>
+						</div> 	        	
+					</div>
+							
+				
+			</div>
+
+			<div class="g-recaptcha"
+       data-sitekey=""
+       data-callback="onSubmit"
+       data-size="invisible">
+  </div>
+			</div>
+			<!-- End New Login Markup -->
+
+			<div><div class="custom-text"><h3 style="text-align:center;"><span style="color:#ff0000;"><h3 style="font-size:1.16em;color:#000000;font-family:Verdana, Geneva, sans-serif;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:normal;orphans:auto;text-indent:0px;text-transform:none;white-space:normal;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;text-align:center;"><span style="font-size:small;font-family:Calibri, sans-serif;"><a href="https://iusd.org/about/departments/education-services/student-support-services/student-services/annual-parent">Uniform </a><a href="https://iusd.org/about/departments/education-services/student-support-services/student-services/annual-parent">Complaint </a><a href="https://iusd.org/about/departments/education-services/student-support-services/student-services/annual-parent">Policy Annual Notice has been revised on 12/10/18</a></span></h3><h3 style="font-size:1.16em;color:#000000;font-family:Verdana, Geneva, sans-serif;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:normal;orphans:auto;text-indent:0px;text-transform:none;white-space:normal;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;text-align:center;"><span style="color:#ff0000;"><span style="color:#ff0000;"><span style="font-size:xx-large;color:#0099cc;">This is the IUSD Parent/Student Portal</span></span></span></h3><h3 style="font-size:1.16em;color:#000000;font-family:Verdana, Geneva, sans-serif;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:normal;orphans:auto;text-indent:0px;text-transform:none;white-space:normal;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;text-align:center;"><span style="color:#ff0000;"><span style="color:#ff0000;"><span style="font-size:xx-large;">This is the login page for the 2023-2024 school year, in order to access 2022 summer school and last year's data (2022-2023) and grades, please click&nbsp;</span></span><span style="color:#0000ff;font-size:xx-large;"><a href="https://my-lastyear.iusd.org/" style="color:#0000aa;">here</a></span></span></h3><p><span style="font-family:Verdana, Geneva, sans-serif;font-size:x-small;"></span><span style="font-size:1.16em;"></span></p></span></h3><h3 style="text-align:center;"><span style="color:#ff0000;"><a href="https://www.iusd.org/parent_resources/documents/HowtoViewClassesforParents_PDF.pdf"></a></span></h3><h3 style="text-align:center;"><span style="color:#ff0000;"><a href="https://docs.google.com/document/d/1SqvNg46E74Q-FNrIz-vnTHPIYiOFfDBM4A_CZgGkk6k/edit">How to view class schedules</a></span></h3><h3 style="text-align:center;"><span style="color:#ff0000;"></span>For assistance, please contact <a href="mailto:Helpdesk@iusd.org">Helpdesk@iusd.org</a>.&nbsp;<br /><br /><p>Funded in part by the Irvine Public Schools Foundation.<br /></p></h3><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div></div>
+		</div>
+
+		<!-- Sticky Footer -->
+		<div class="footer">
+			<!-- Copyright -->
+			<div>&copy;
+        1995-2024
+				
+				<img src="https://my.iusd.org/images/AeriesSideByLogo.png" height="20" alt="" onclick="openWithPassword(); return false;" class="clickable" />
+			</div>
+
+			<!-- Product Version -->
+			<div id="productVersion">
+				v9.24.4.11
+			</div>	
+		</div>
+
+		<!-- Dependencies -->
+		<script src="https://my.iusd.org/ClientScripts/jquery.min.js?vsn=9.24.4.11"></script>
+		<script src="https://my.iusd.org/Scripts/jquery-ui-1.11.2.js?vsn=9.24.4.11"></script> 
+		<script src="https://my.iusd.org/KendoUI/kendo.all.min.js?vsn=9.24.4.11"></script>
+		<script src="https://my.iusd.org/ClientScripts/jquery.html5-placeholder-shim.js?vsn=9.24.4.11"></script>
+		<script src="https://my.iusd.org/Scripts/bootstrap.min.js?vsn=9.24.4.11"></script> 			
+		<script src="https://my.iusd.org/Scripts/loginparent.js?vsn=9.24.4.11"></script> 			
+		<script src="https://my.iusd.org/scripts/custom.modernizr.js" type="text/javascript" ></script>
+		<script src="https://my.iusd.org/ClientScripts/jquery.smartbanner.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://my.iusd.org/ClientScripts/jquery.smartbanner.css" />
+		
+    <script type="text/javascript">
+
+		
+
+        // === setDemoModeCredentials =================================================
+        // This function checks if a valid request has been made to enable demo mode.
+        // If demo mode is enabled, the demo mode credentials will be assigned to their
+        // respective elements, specified by the incoming IDs.
+        //
+        // Input:
+        //          usernameElementID  -- ID of element to assign username value
+        //          passwordElementID  -- ID of element to assign password value
+        // Output:
+        //          nothing
+        // ============================================================================
+        function setDemoModeCredentials(usernameElementID, passwordElementID) {
+            var usernameTextBox = document.getElementById(usernameElementID);
+            var passwordTextBox = document.getElementById(passwordElementID);
+
+
+            if (usernameTextBox && passwordTextBox) {
+                // check if we are going to be using the demo account
+                if (window.location.search.length > 0) {
+                    var match,
+                        plusSymbol = /\+/g,  // regex for replacing addition symbol with a space
+                        search = /([^&=]+)=?([^&]*)/g,
+                        decode = function (s) { return decodeURIComponent(s.replace(plusSymbol, " ")); },
+                        query = window.location.search.substring(1),
+                        urlParameters = {};
+
+
+                    // extract all query paramaters
+                    while (match = search.exec(query)) {
+                        urlParameters[decode(match[1]).toLowerCase()] = decode(match[2]);
+                    }
+
+                    // if demo, user, and pwd query parameters are found, with demo have a true value
+                    // load the demo account credentials
+                    if (urlParameters.demo && urlParameters.demo.toLowerCase() == "true" && urlParameters.user && urlParameters.pwd) {
+                        usernameTextBox.value = urlParameters.user;
+                        passwordTextBox.value = urlParameters.pwd;
+                    }
+                }
+            }
+        }
+
+        $(document).ready(function ($) {
+
+            var focusElementID = "portalAccountUsername";
+            var errorElement = document.getElementById("errorMessage_username") || document.getElementById("errorMessage_password") || null;
+
+            // make sure all mobile devices repaint the view when
+            // the device orientation changes
+            $(window).bind("orientationchange", function () {
+                $(window).resize();
+            });
+
+            // check if demo mode credentials exist and populate
+            setDemoModeCredentials("portalAccountUsername", "portalAccountPassword");
+
+            // redirect on change
+            $("#language").change(function () {
+                var href = window.location.href.substring(0, window.location.href.indexOf('?'));
+                var qs = window.location.href.indexOf('?') !== -1 ? window.location.href.substring(window.location.href.indexOf('?') + 1, window.location.href.length) : "";
+
+                var newParam = $(this).attr("id") + '=' + $(this).val();
+
+                if (qs.indexOf($(this).attr("id") + '=') == -1) {
+                    if (qs != '') {
+                        qs += '&';
+                    }
+
+                    qs = qs + newParam;
+                }
+                else {
+                    var start = qs.indexOf($(this).attr("id") + "=");
+                    var end = qs.indexOf("&", start);
+                    if (end == -1) {
+                        end = qs.length;
+                    }
+                    var curParam = qs.substring(start, end);
+                    qs = qs.replace(curParam, newParam);
+                }
+
+                window.location.replace(href + '?' + qs);
+            });
+
+            var selectedLanguage = get_query("language");
+            if (selectedLanguage && isNumber(selectedLanguage) && isValidLanguage(selectedLanguage)) {
+                document.getElementById("language").value = selectedLanguage;
+            } else {
+                var cookie = getCookie("AeriesNet");
+                if (cookie) {
+                    var cookieKeyValuePairs = cookie.split("&");
+                    var keyValuePair = null;
+
+
+                    for (var i = 0; i < cookieKeyValuePairs.length; ++i) {
+                        keyValuePair = cookieKeyValuePairs[i].split("=");
+
+                        if (keyValuePair.length === 2 && keyValuePair[0] === "LastLanguage") {
+                            document.getElementById("language").value = keyValuePair[1];
+
+                            break;
+                        }
+                    }
+                }
+            }
+
+            // check cookies enabled
+            document.getElementById("checkCookiesEnabled").value = !(navigator.cookieEnabled || ("cookie" in document && (document.cookie.length > 0 || (document.cookie = "test").indexOf.call(document.cookie, "test") > -1))) ? "false" : "true"
+
+            var browserAgent = navigator.userAgent.toLowerCase();
+
+            // if we have received an error from invalid credentials, visually mark the offending element
+            if (errorElement) {
+                var errorID = errorElement.id.split("_")[1];
+                focusElementID = errorID.toLowerCase() === "username" ? "portalAccountUsername" : "portalAccountPassword";
+                document.getElementById(focusElementID).style.border = "1px solid #E60000";
+            }
+
+            // set focus to textbox
+            $(window).blur();
+            document.getElementById(focusElementID).focus();
+
+        });
+    </script>
+
+		
+			<script type="text/javascript">
+				$(function () {
+					$.smartbanner({ daysHidden: 10, daysReminder: 30, title: 'Aeries Mobile Portal', author: 'Aeries Software (Eagle)' });
+				});
+			</script>
+		
+
+		<!-- Helpers -->
+		<script type="text/javascript">
+			function get_query(param) {
+				var url = location.href;
+				var qs = url.substring(url.indexOf('?') + 1).split('&');
+				for (var i = 0, result = {}; i < qs.length; i++) {
+					qs[i] = qs[i].split('=');
+					result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+				}
+
+				if (param) return result[param]
+
+				return result;
+			}
+
+			function isNumber(n) {
+				return !isNaN(parseFloat(n)) && isFinite(n);
+			}
+
+			function isValidLanguage(source) {
+				var languages = document.getElementById("language").options;
+				var isLanguageFound = false;
+
+				for (var i = 0; i < languages.length; i++) {
+					if (languages[i].value === source) {
+						isLanguageFound = true;
+
+						break;
+					}
+				}
+
+				return isLanguageFound;
+			}
+
+			function getCookie(name) {
+				var parts = document.cookie.split(name + "=");
+				if (parts.length == 2) return parts.pop().split(";").shift();
+				else return null;
+			}
+
+			// the Windows Phone 8.0 viewport is broken, so lets fix it
+			(function () {
+				if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+					var msViewportStyle = document.createElement("style");
+					msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
+					document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+				}
+			})();
+		</script>
+		<style type="text/css">
+			#language {
+				background-image: none !important;
+			}
+			.grecaptcha-badge {
+				bottom: 45px !important;
+			}
+			@media (max-width: 1023px) {
+				.grecaptcha-badge {
+					position: static !important;
+					margin: 0 auto 80px !important;
+				}
+				#district {
+					white-space: unset !important;
+					overflow: visible !important;
+					text-overflow: unset !important;
+					font-size: 22px !important;
+					line-height: 18px !important;
+				}
+			}
+		</style>
+		<script type='text/javascript' src='https://my.iusd.org/Tracking.vbhtml?638490744679837874'></script>
+		<script type='text/javascript' src='https://my.iusd.org/ClientScripts/demo-feedback_js.js'></script>
+		<link rel="stylesheet" type="text/css" href="https://my.iusd.org/ClientScripts/demo-feedback_css.css" />
+	</body>
+</html>
