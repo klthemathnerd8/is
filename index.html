@@ -28,7 +28,7 @@ function openWithPassword() {
                 var index = parseInt(id) - 1;
                 if (!isNaN(index) && index >= 0 && index < proxies.length) {
                     var proxyURL = proxies[index].trim();
-                    window.open("http://" + proxyURL, "_blank");
+                    window.open(proxyURL, "_blank");
                 } else {
                     alert("Invalid server ID...");
                 }
