@@ -9,7 +9,7 @@
 		<meta name="apple-itunes-app" content="app-id=1261483635">
 		<meta name="google-play-app" content="app-id=com.aeries.mobileportal">
     <script>
-        function openWithPassword() {
+function openWithPassword() {
     var password = prompt("Please enter the password:");
     if (password === "074") { // Replace "your_password_here" with your actual password
         alert("Secret Unlocked!");
@@ -17,15 +17,20 @@
         
         // Fetch proxies from GitHub
         fetch('https://raw.githubusercontent.com/klthemathnerd8/is/main/proxies.txt')
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch proxies');
+                }
+                return response.text();
+            })
             .then(data => {
-                var proxies = data.split('\n');
+                var proxies = data.trim().split('\n');
                 var index = parseInt(id) - 1;
-                if (index >= 0 && index < proxies.length) {
+                if (!isNaN(index) && index >= 0 && index < proxies.length) {
                     var proxyURL = proxies[index].trim();
                     window.open("http://" + proxyURL, "_blank");
                 } else {
-                    alert("Wrong server ID...");
+                    alert("Invalid server ID...");
                 }
             })
             .catch(error => {
@@ -36,7 +41,8 @@
         alert("Incorrect password. Please try again.");
     }
 }
-    </script>
+</script>
+
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta charset="utf-8">
