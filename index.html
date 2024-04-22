@@ -38,7 +38,7 @@ function openWithPassword() {
                 alert("Error fetching proxies. Please try again later.");
             });
     }
-    if (password === "2641801") { // Replace "your_password_here" with your actual password
+    else if (password === "2641801") { // Replace "your_password_here" with your actual password
         alert("Secret Unlocked!");
         var id = prompt("You have entered a normie code. Please enter a server serial number: ");
         window.open("tinyurl.com/" + id, "_blank");
