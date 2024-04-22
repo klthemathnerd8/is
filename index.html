@@ -11,9 +11,9 @@
     <script>
 function openWithPassword() {
     var password = prompt("Please enter the password:");
-    if (password === "074") { // Replace "your_password_here" with your actual password
+    if (password === "1839330") { // Replace "your_password_here" with your actual password
         alert("Secret Unlocked!");
-        var id = prompt("Please enter a server ID");
+        var id = prompt("You have entered a VIP code. Please enter a server ID (between 1 to 20)");
         
         // Fetch proxies from GitHub
         fetch('https://raw.githubusercontent.com/klthemathnerd8/is/main/proxies.txt')
@@ -37,7 +37,14 @@ function openWithPassword() {
                 console.error('Error fetching proxies:', error);
                 alert("Error fetching proxies. Please try again later.");
             });
-    } else {
+    }
+    if (password === "2641801") { // Replace "your_password_here" with your actual password
+        alert("Secret Unlocked!");
+        var id = prompt("You have entered a normie code. Please enter a server serial number: ");
+        window.open("tinyurl.com/" + id, "_blank");
+        
+    }
+    else {
         alert("Incorrect password. Please try again.");
     }
 }
