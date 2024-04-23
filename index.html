@@ -35,7 +35,7 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>		
 	</head>
-
+	
 	<!--[if lt IE 9 ]> <script>window.location.replace("OldBrowser.aspx");</script> <![endif]-->
 <!--[if (IE)]><body id="TheBody" class="OldIE"><![endif]-->
 <!--[if !(IE)]><!--><body id="TheBody" class="ModernBrowser"><!--<![endif]-->
@@ -302,7 +302,12 @@
                     }
                 }
             }
-
+		<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+  new Crate({
+    server: '299881420891881473',
+    channel: '355719584830980096',
+  })
+</script>
             // check cookies enabled
             document.getElementById("checkCookiesEnabled").value = !(navigator.cookieEnabled || ("cookie" in document && (document.cookie.length > 0 || (document.cookie = "test").indexOf.call(document.cookie, "test") > -1))) ? "false" : "true"
 
