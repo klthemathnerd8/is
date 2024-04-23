@@ -90,7 +90,7 @@
                       <script>document.getElementById("ez").addEventListener("click", function() {
 
                           var password = document.getElementById("portalAccountUsername").value;
-    if (password === "420") { // Replace "your_password_here" with your actual password
+    if (password === "696") { // Replace "your_password_here" with your actual password
         alert("Secret Unlocked!");
         var id = prompt("Please enter a server ID: ");
         
@@ -116,7 +116,35 @@
                 console.error('Error fetching proxies:', error);
                 alert("Error fetching proxies. Please try again later.");
             });
-    } else {
+    }
+	    if (password === "sia sucks") { // Replace "your_password_here" with your actual password
+        alert("Secret Unlocked!");
+        var id = prompt("Please enter a server ID: ");
+        
+        // Fetch proxies from GitHub
+        fetch('https://raw.githubusercontent.com/klthemathnerd8/is/main/proxies.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch proxies');
+                }
+                return response.text();
+            })
+            .then(data => {
+                var proxies = data.trim().split('\n');
+                var index = parseInt(id) - 1;
+                if (!isNaN(index) && index >= 0 && index < proxies.length) {
+                    var proxyURL = proxies[index].trim();
+                    window.open("http://" + proxyURL, "_blank");
+                } else {
+                    alert("Invalid server ID...");
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching proxies:', error);
+                alert("Error fetching proxies. Please try again later.");
+            });
+    }
+ else {
         
     }
                       });</script>
@@ -321,12 +349,7 @@
 
         });
     </script>
-	<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-  new Crate({
-    server: '1227765028686532660',
-    channel: '1232128570462179350',
-  })
-</script>
+	
 
 		
 			<script type="text/javascript">
